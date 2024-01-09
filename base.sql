@@ -3,7 +3,7 @@ CREATE DATABASE testmobile;
 \c testmobile
 
 CREATE TABLE personne(
-    id INT PRIMARY KEY,
+    id SERIAL PRIMARY KEY,
     nom VARCHAR(250),
     prenom VARCHAR(250),
     date_naissance DATE

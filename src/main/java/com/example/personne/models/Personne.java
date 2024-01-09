@@ -6,20 +6,13 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.SequenceGenerator;
 
 @Entity
 public class Personne {
     
     @Id
-    @SequenceGenerator(
-        name = "personne_sequence",
-        sequenceName = "personne_sequence",
-        allocationSize = 1
-    )
     @GeneratedValue(
-        strategy = GenerationType.SEQUENCE,
-        generator = "personne_sequence"
+        strategy = GenerationType.IDENTITY
     )
     private int id;
     private String nom;
